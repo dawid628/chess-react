@@ -1,14 +1,8 @@
-import './styles/Game.css'
-import React, { useState } from 'react'
+import { Chess } from 'chess.js';
+import { BehaviorSubject } from 'rxjs'
 
 
-const Game = () => {
-
-  return (
-    <>
-		
-	</>
-  )
-}
-
-export default Game
+const chess = new Chess()
+export const gameSubject = new BehaviorSubject({
+    board: chess.board()
+})
