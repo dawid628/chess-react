@@ -7,6 +7,7 @@ export const gameSubject = new BehaviorSubject()
 
 export function initGame() {
     const savedGame = localStorage.getItem('savedGame')
+    
     if (savedGame) {
         chess.load(savedGame)
     }
