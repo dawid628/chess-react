@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
-import { gameSubject, initGame, resetGame } from './components/Game';
+import { gameSubject, initGame, resetGame, undoMove, saveGame, loadGame } from './components/Game';
 import Board from './components/Board';
 
 function App() {
@@ -21,15 +21,23 @@ function App() {
 
   return (
     <div className="container">
+      <div className="btn-container">
+        <button className="new-game-btn" onClick={resetGame}><span>NEW GAME</span></button>
+        <button className="new-game-btn" onClick={undoMove}>UNDO MOVE</button>
+        <button className="new-game-btn" onClick={saveGame}>SAVE GAME</button>
+        <button className="new-game-btn" onClick={loadGame}>LOAD GAME</button>
+      </div>
+      
       {
         isGameOver && (
           <h2 className="vertical-text">
             GAME OVER
-            <button onClick={resetGame}><span>NEW GAME</span></button>
         </h2>
       )}
       <div className="board-container">
-        <Board board={board}/>
+        {board &&
+          <Board board={board}/>
+        }
       </div>
       {result && <p className="vertical-text">{result}</p>}
     </div>

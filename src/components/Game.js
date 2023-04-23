@@ -5,20 +5,19 @@ const chess = new Chess()
 
 export const gameSubject = new BehaviorSubject()
 
+// start gry przy renderowaniu komponentu
 export function initGame() {
-    const savedGame = localStorage.getItem('savedGame')
-    
-    if (savedGame) {
-        chess.load(savedGame)
-    }
+    chess.board()
     updateGame()
 }
 
+// restart stanu gry
 export function resetGame() {
     chess.reset()
     updateGame()
 }
 
+// funkcja filtrująca ruch (czy dotarł do końca planszy?)
 export function handleMove(from, to) {
     // czy dany ruch ma promocje?
     const promotions = chess.moves({ verbose: true }).filter(m => m.promotion)
@@ -32,7 +31,7 @@ export function handleMove(from, to) {
     move(from, to)
 }
 
-
+// ruch figury
 export function move(from, to, promotion) {
     let tempMove = { from, to }
     if (promotion) {
@@ -45,6 +44,7 @@ export function move(from, to, promotion) {
     }
 }
 
+// odświezenie szachownicy
 const updateGame = pendingPromotion => {
     const isGameOver = chess.game_over()
 
@@ -56,15 +56,14 @@ const updateGame = pendingPromotion => {
         result: isGameOver ? getGameResult() : null
     }
 
-    localStorage.setItem('savedGame', chess.fen())
-
     gameSubject.next(newGame)
 }
 
+// powód końca gry
 const getGameResult = () => {
     if (chess.in_checkmate()) {
         const winner = chess.turn() === "w" ? 'BLACK' : 'WHITE'
-        return `CHECKMATE - ${winner} WON`
+        return `CHECKMATE - ${winner} - WON`
     } else if (chess.in_draw()) {
         let reason = '50 - MOVES - RULE'
         if (chess.in_stalemate()) {
@@ -80,3 +79,22 @@ const getGameResult = () => {
     }
 }
 
+// cofanie ruchu
+export function undoMove() {
+    chess.undo();
+    updateGame()
+}
+
+// zapisanie gry
+export function saveGame() {
+    localStorage.setItem('savedGame', chess.fen())
+}
+
+// wczytanie gry
+export function loadGame() {
+    const savedGame = localStorage.getItem('savedGame')
+    if (savedGame) {
+        chess.load(savedGame)
+    }
+    updateGame()
+}

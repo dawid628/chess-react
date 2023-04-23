@@ -9,11 +9,14 @@
     align-items: center;
     justify-content: center;
     background-color: rgb(34, 34, 34);
+    position: relative;
+    flex-wrap: wrap; /* Dodane */
 }
 
 .board-container {
-    width: 600px;
-    height: 600px;
+    width: 100%; 
+    max-width: 500px;
+    height: 500px;
 }
 
 .board {
@@ -68,7 +71,7 @@
     text-orientation: upright;
     writing-mode: vertical-lr;
     padding: 10px;
-    color: black;
+    color: #fff;
 }
 
 .vertical-text button {
@@ -78,3 +81,49 @@
     border: 2px solid white;
     
 }
+
+.new-game-btn{
+    background-color: #ffffffb1;
+    padding: 10px;
+    border-radius: 9px;
+    top: 7rem;
+    position: absolute;
+    font-style: italic;
+    font-weight: 700;
+    border: none;
+}
+
+.btn-container {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    margin-bottom: 1rem;
+    margin-left: 10px;
+    margin-top: 10px;
+    z-index: 999; /* Dodane */
+}
+.new-game-btn {
+    background-color: #ffffffb1;
+    padding: 10px;
+    border-radius: 9px;
+    margin-right: 10px; /* Dodane */
+    font-style: italic;
+    font-weight: 700;
+    border: none;
+    box-shadow: 0 0 5px #ffffffb1;
+    position: relative;
+
+}
+
+.new-game-btn:hover {
+    box-shadow: 0 0 15px #ffffffb1;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media (width: 1384px) {
+    .btn-container {
+      top: -4rem;
+    }
+  }
+  

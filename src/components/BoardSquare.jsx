@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Square from './Square'
 import Piece from './Piece'
 import { useDrop } from 'react-dnd'
-import { move, handleMove, gameSubject } from './Game'
+import { handleMove, gameSubject } from './Game'
 import Promote from './Promote'
 
 const BoardSquare = ({ piece, black, position }) => {
