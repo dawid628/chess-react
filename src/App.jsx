@@ -22,10 +22,10 @@ function App() {
   return (
     <div className="container">
       <div className="btn-container">
-        <button className="new-game-btn" onClick={resetGame}><span>NEW GAME</span></button>
-        <button className="new-game-btn" onClick={undoMove}>UNDO MOVE</button>
-        <button className="new-game-btn" onClick={saveGame}>SAVE GAME</button>
-        <button className="new-game-btn" onClick={loadGame}>LOAD GAME</button>
+        <button className="new-game-btn" onClick={resetGame}><span>Nowa gra</span></button>
+        <button className="new-game-btn" onClick={undoMove}>Cofnij ruch</button>
+        <button className="new-game-btn" onClick={saveGame}>Zapisz grę</button>
+        <button className="new-game-btn" onClick={loadGame}>Wczytaj grę</button>
       </div>
       
       {
