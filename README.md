@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Chess Game
+This project was developed as part of the "Multimedia Techniques" course. It is a web application that allows local multiplayer chess game for two players. The application is built using web technologies. Upon launching the application, the user has the option to play a game of chess with another player on the same machine. The interactive chessboard is equipped with buttons for managing the game, such as "New Game", "Undo Move", "Save Game", and "Load Game".
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Requirements
+- Node.js and npm installed on the local computer.
+- Code editor such as Visual Studio Code, Sublime Text, or Atom.
+- Git installed on the local computer (if the project will be cloned from a remote repository).
+- Access to the repository or project code files.
 
-## Available Scripts
+## Getting Started
+- Clone the project files to your local computer.
+- Navigate to the project directory in the command line or terminal.
+- Install project dependencies using the following command:
+`npm install`
+- Start the React project using the following command:
+`npm start`
 
-In the project directory, you can run:
+This will run the local development server and open the React application in the browser on the default port 3000. You can now view and test the React application in the browser.
 
-### `npm start`
+## Project Features
+- Displaying an interactive chessboard in a web browser.
+- Handling player moves by dragging and dropping pieces using the mouse.
+- Implementation of buttons for managing the game, such as "New Game", "Undo Move", "Save Game", and "Load Game".
+- Proper chess logic, ensuring compliance with the rules of the game.
+- Ability to play local chess games for two players on the same machine.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies
+- HTML
+- CSS
+- JavaScript
+- ReactJS
+- Git version control system
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Libraries
+- react-dnd
+- rxjs
+- chess.js
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Development Perspectives
+In further development of the project, possible future features to consider could include:
+- Expansion of game management features, such as the ability to choose different chess variants.
+- Implementation of online multiplayer functionality.
+- Implementation of chess game against computer opponent.
